@@ -56,7 +56,10 @@ if _dash == true and uso_dash = 0 and usar_dash = 1{
 	uso_dash = 1
 	alarm[1] = 10
 	alarm[0] = 600
-	image_alpha = 0.1
+	alarm[3] = room_speed - 22
+	global.dash = 1
+	image_blend= c_black
+	image_alpha = 0.05
 	imune = 1
 	part_particles_create(global.P_System, x, y, global.part_dash, 75);
 }
@@ -73,7 +76,20 @@ if place_meeting(x, y, obj_controle_digito) and criar_control2 = 1{
 #endregion
 
 #region colisoes
-if place_meeting(x, y+1, obj_chao_fogo) and imune = 0 global.vida -= 0.1 / (1+global.defesa)
+if place_meeting(x, y+1, obj_chao_fogo) and imune = 0 {
+	global.vida -= 0.1 / (1+global.defesa)
+	lava_damage = 1
+	na_lava  =1
+}else if na_lava = 1{ 
+	lava_damage = 0
+	na_lava = 0
+}
+if lava_damage = 1 and na_lava = 1{
+	image_blend = c_red
+}if lava_damage = 0 and na_lava = 0 {
+	image_blend = cor_player
+	na_lava = 2
+}
 if global.vida < 0 and reviver = 0 {
 	instance_destroy(id)
 }
@@ -93,7 +109,6 @@ if place_meeting(x, y, obj_controle_digito4) and criar_control6 = 1{
 	part_particles_create(global.P_System, obj_controle_digito4.x-550, obj_controle_digito4.y+50, global.part_mana2, 100)
 	criar_control6 = 0
 	global.usar_habs1 = 1
-	global.basico = 1
 }
 if place_meeting(x, y, obj_controle_digito5) and criar_control7 = 1{
 	instance_create_layer(201,204,layer, obj_control7)
@@ -103,7 +118,7 @@ if place_meeting(x, y, obj_controle_digito5) and criar_control7 = 1{
 #endregion
 
 #region ataque
-if global.atacar_espada = 1 {
+if global.atacar_espada = 1 and global.espada_equipada = 0{
 	var _ataque = mouse_check_button_pressed(mb_left)
 	if segundo_ataque = 1  and last_atack = 0{
 		if _ataque {
@@ -187,6 +202,96 @@ if global.atacar_espada = 1 {
 		}
 	}
 }
+
+if global.atacar_espada = 1 and global.espada_equipada = 1{
+	var _ataque = mouse_check_button_pressed(mb_left)
+	if segundo_ataque = 1  and last_atack = 0{
+		if _ataque {
+			if left = 1{
+				instance_create_layer(x + 50, y- 25, layer, obj_espada2)
+				obj_espada2.sprite_index = spr_katana3
+				obj_espada2.image_angle = 180
+				segundo_ataque = 0
+				terceiro_ataque = 1
+				last_atack = 0
+				global.ataque1 = 2
+				alarm[5] = room_speed / 50
+			}
+		}	
+	}
+	if terceiro_ataque = 1 and last_atack = 1{
+		if _ataque {
+			if left = 1{
+				instance_create_layer(x + 70, y- 60, layer, obj_espada2)
+				obj_espada2.sprite_index = spr_katana2
+				obj_espada2.image_xscale = 1.8
+				obj_espada2.image_yscale = 1.8
+				obj_espada2.image_blend = c_red
+				instance_create_layer(x,y,layer,obj_control_treme)
+				segundo_ataque = 0
+				terceiro_ataque = 0
+				alarm[6] = room_speed * cooldown_atack
+				global.ataque1 = 3
+				if global.temp_pause1= 0 vermelhar(3)
+			}
+		}	
+	}
+	if segundo_ataque = 1  and last_atack = 0{
+		if _ataque {
+			if right = 1{
+				instance_create_layer(x - 50, y- 25, layer, obj_espada2)
+				obj_espada2.sprite_index = spr_katana2
+				obj_espada2.image_angle = 180
+				segundo_ataque = 0
+				terceiro_ataque = 1
+				last_atack = 0
+				global.ataque1 = 2
+				alarm[5] = room_speed / 50
+			}
+		}	
+	}
+	if terceiro_ataque = 1 and last_atack = 1{
+		if _ataque {
+			if right = 1{
+				instance_create_layer(x - 70, y- 60, layer, obj_espada2)
+				obj_espada2.sprite_index = spr_katana3
+				obj_espada2.image_xscale = 1.8
+				obj_espada2.image_yscale = 1.8
+				obj_espada2.image_blend = c_red
+				instance_create_layer(x,y,layer,obj_control_treme)
+				segundo_ataque = 0
+				terceiro_ataque = 0
+				alarm[6] = room_speed * cooldown_atack
+				if global.temp_pause1= 0 vermelhar(3)
+				global.ataque1 = 3
+			}
+		}	
+	}
+	if _ataque and segundo_ataque = 0 and terceiro_ataque = 0  and last_atack = 0{
+		if left = 1{
+			alarm[4] = room_speed
+			instance_create_layer(x + 50, y- 25, layer,  obj_espada2)
+			obj_espada2.sprite_index = spr_katana2
+			segundo_ataque = 1
+			terceiro_ataque = 0
+			global.ataque1 = 1
+
+		}
+		if right = 1{
+			instance_create_layer(x - 50, y- 25, layer,  obj_espada2)
+			obj_espada2.sprite_index = spr_katana3
+			segundo_ataque = 1
+			terceiro_ataque = 0
+			global.ataque1 = 1
+			alarm[4] = room_speed
+		}
+	}
+}
+
+
+
+
+
 #endregion
 	
 #region up
@@ -194,9 +299,9 @@ if global.xp >= 100{
 	global.nvl++
 	global.xp = 0
 	global.vida = 100
-	global.defesa += .3
-	global.tamanho_barra_de_vida += 5
-	global.diminuixp +=.55
+	global.defesa += .16
+	global.tamanho_barra_de_vida += 3
+	global.diminuixp +=.75
 	instance_create_layer(x, y, layer_create(-1, "Instances_1"), obj_lvl_up)
 	imune =1
 	image_alpha = .5
@@ -219,12 +324,41 @@ if _hab1 and global.mana >= 25 and global.usar_habs1 = 1 and cooldown1 = 0{
 	velocidade = 10.6
 	alarm[8] = room_speed * 20
 }
+var _hab2 = keyboard_check_pressed(ord("X"))
+if _hab2 and global.mana >= 10 and global.usar_habs1 = 1 and cooldown2 = 0 and global.habilidade2 = 1{
+	global.mana -= 10
+	cooldown2 = 1	
+	if left = 1{
+		part_particles_create(global.P_System, x, y, global.part_vento2, 50)
+		instance_create_layer(x, y, layer, obj_habilidade2)
+		obj_habilidade2.speed = 24
+		obj_habilidade2.direction = 0
+		obj_habilidade2.image_yscale = 3
+	}
+	if right = 1{
+		part_particles_create(global.P_System, x, y, global.part_vento3, 50)
+		instance_create_layer(x, y, layer, obj_habilidade2)
+		obj_habilidade2.speed = 24
+		obj_habilidade2.direction = 180
+		obj_habilidade2.image_yscale = 3
+	}
+	alarm[9] = room_speed * 3
+}
 #endregion
 
+if global.cor_up = 1 and mudar_cor1 = 1{
+	cor_player = #0054A6
+	global.defesa += 1
+	mudar_cor1 = 0
+	image_blend = cor_player
+}
 
-
-
-
+if place_meeting(x, y, obj_zoom){
+	camera_set_view_size(view_camera, 683, 384)
+}
+if !place_meeting(x, y, obj_zoom){
+	camera_set_view_size(view_camera, 1366, 768)
+}
 
 
 

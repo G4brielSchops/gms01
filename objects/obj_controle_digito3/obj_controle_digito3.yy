@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "control",
+    "path": "folders/Objects/control.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,5 +30,5 @@
     "path": "sprites/spr_controle_digito/spr_controle_digito.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

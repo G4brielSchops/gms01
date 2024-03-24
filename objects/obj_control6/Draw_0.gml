@@ -7,7 +7,9 @@ if letra <= _tamanho_do_texto{
 	letra++
 }
 draw_set_color(c_white)
-draw_text(9044, 1120, palavra)
+draw_set_font(fnt_font1)
+draw_text(10024, 1248, palavra)
+draw_set_font(-1)
 draw_set_color(-1)
 }
 

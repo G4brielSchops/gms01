@@ -22,7 +22,7 @@ part_type_life(global.part_caverna_particulas1, 180, 180);
 global.part_dash = part_type_create();
 part_type_shape(global.part_dash, pt_shape_flare);
 part_type_size(global.part_dash, 0.01, 0.05, 0, 0.5);
-part_type_color2(global.part_dash, c_black, c_silver);
+part_type_color1(global.part_dash, c_black);
 part_type_alpha3(global.part_dash, 1, 1, 0.4);
 part_type_speed(global.part_dash, 2, 2.5, -0.01, 1.1);
 part_type_direction(global.part_dash, 0, 359, 0, 20);
@@ -132,25 +132,7 @@ part_type_life(global.part_coins2, 8, 13);
 #endregion
 
 #region variaveis globais
-global.tamanho_barra_de_mana = 0
-global.P_System=part_system_create_layer("Instances", true);
-global.left = false
-global.right = false
-global.xp = 0
-global.vida = 85
-global.directionp1l = 0
-global.ataque1 = 0
-global.temp_pause1 = 0
-global.nvl = 0
-global.mana = 100
-global.tamanho_barra_de_vida = 0
-global.atacar_espada = 1
-global.defesa = 0
-global.diminuixp = 0
-global.treme = 12
-global.usar_habs1 = 1
-global.directionp2l = 0
 global.basico = 1
-global.coins = 0
+
 #endregion
 

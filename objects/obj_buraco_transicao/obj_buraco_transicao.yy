@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "outros",
+    "path": "folders/Objects/outros.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -26,9 +26,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_sensor_transicao",
-    "path": "sprites/spr_sensor_transicao/spr_sensor_transicao.yy",
+    "name": "spr_buraco_transicao",
+    "path": "sprites/spr_buraco_transicao/spr_buraco_transicao.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

@@ -109,6 +109,35 @@ part_type_direction(global.part_mana2, 225, 315, 0, 20);
 part_type_blend(global.part_mana2, false);
 part_type_life(global.part_mana2, 70, 90);
 
+global.part_vento2 = part_type_create();
+part_type_shape(global.part_vento2, pt_shape_flare);
+part_type_size(global.part_vento2, 0.03, 0.05, 0, 0.9);
+part_type_color2(global.part_vento2, c_silver, c_dkgrey);
+part_type_alpha3(global.part_vento2, 1, 1, 0.4);
+part_type_speed(global.part_vento2, 32, 39, -0, -1);
+part_type_direction(global.part_vento2, 0, -0, 0, 20);
+part_type_blend(global.part_vento2, false);
+part_type_life(global.part_vento2, 15, 18);
+
+global.part_vento3 = part_type_create();
+part_type_shape(global.part_vento3, pt_shape_flare);
+part_type_size(global.part_vento3, 0.03, 0.05, 0, 0.9);
+part_type_color2(global.part_vento3,c_silver, c_dkgrey);
+part_type_alpha3(global.part_vento3, 1, 1, 0.4);
+part_type_speed(global.part_vento3, 32, 39, -0, -1);
+part_type_direction(global.part_vento3, 180, 180, 0, 20);
+part_type_blend(global.part_vento3, false);
+part_type_life(global.part_vento3, 15, 18);
+
+global.part_vento1 = part_type_create();
+part_type_shape(global.part_vento1, pt_shape_flare);
+part_type_size(global.part_vento1, 0.04, 0.5, 0, 0.9);
+part_type_color2(global.part_vento1, c_silver, c_dkgrey);
+part_type_alpha3(global.part_vento1, 1, 1, 1);
+part_type_speed(global.part_vento1, 9, 12, -0.3, -1);
+part_type_direction(global.part_vento1, 0, 359, 0, 20);
+part_type_blend(global.part_vento1, false);
+part_type_life(global.part_vento1, 8, 13);
 #endregion
 
 #region variaveis globais
@@ -120,17 +149,23 @@ global.xp = 0
 global.directionp1l = 0
 global.ataque1 = 0
 global.temp_pause1 = 0
-global.vida = 100
+global.vida = 84
 global.nvl = 0
 global.atacar_espada = 0
 global.mana = 100
 global.tamanho_barra_de_vida = 0
 global.defesa = 0
+global.hab2_knockback = 0
 global.diminuixp = 0
+global.dash = 0
+global.cor_up =0
 global.treme = 12
+global.espada_equipada = 0
 global.directionp2l = 0
 global.basico = 0
 global.coins = 0
+global.my_id_control1 = 0
 global.usar_habs1 = 0
+global.habilidade2 = 0
 #endregion
 

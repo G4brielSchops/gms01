@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "chao",
+    "path": "folders/Objects/chao.yy",
   },
   "parentObjectId": {
     "name": "obj_chao",
@@ -33,5 +33,5 @@
     "path": "sprites/spr_chao_invisivel/spr_chao_invisivel.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

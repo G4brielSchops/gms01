@@ -1,7 +1,12 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 #region basic
+cor_player = c_white
 vel = 7
+cooldown2 = 0
+lava_damage = 0
+na_lava = 0
+mudar_cor1 = 1
 left = 0
 criar_control7 = 1
 right = 0
@@ -11,7 +16,7 @@ cooldown1 = 0
 segundo_ataque = 0
 terceiro_ataque = 0
 last_atack = 0
-image_blend = c_silver
+image_blend = cor_player
 mover_create(vel, , .37)
 uso_dash = 0
 imune = 0
