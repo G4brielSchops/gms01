@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "chao",
-    "path": "folders/Objects/chao.yy",
+    "name": "chao_caverna",
+    "path": "folders/Objects/chao_caverna.yy",
   },
   "parentObjectId": null,
   "persistent": false,

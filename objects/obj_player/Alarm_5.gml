@@ -1,8 +1,7 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
-last_atack = 1
-
-
+if uso_dash2 = 1 uso_dash2 = 0
+cc = 1
 
 
 

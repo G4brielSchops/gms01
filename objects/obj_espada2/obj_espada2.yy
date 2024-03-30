@@ -4,6 +4,9 @@
   "name": "obj_espada2",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_inimigo1","path":"objects/obj_inimigo1/obj_inimigo1.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_boss_magma","path":"objects/obj_boss_magma/obj_boss_magma.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_inimigo_ceu1","path":"objects/obj_inimigo_ceu1/obj_inimigo_ceu1.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_inimigo_ceu2","path":"objects/obj_inimigo_ceu2/obj_inimigo_ceu2.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],

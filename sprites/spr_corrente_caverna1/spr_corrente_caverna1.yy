@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "spr_corrente_caverna1",
   "bbox_bottom": 63,
-  "bbox_left": 2,
-  "bbox_right": 61,
+  "bbox_left": 4,
+  "bbox_right": 59,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c336466-3797-44f4-a315-7410570ac596",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"621286c8-3238-4f56-bcf6-45cdd4834253",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9314a735-e961-4cc1-ae6e-c17d2020d5c2","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"372c665b-510e-4c37-b826-88c1a508bcc8","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": {
     "resourceType": "GMNineSliceData",
@@ -48,8 +48,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "sprites1",
-    "path": "folders/Sprites/sprites1.yy",
+    "name": "sprites_caverna",
+    "path": "folders/Sprites/sprites_caverna.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -77,7 +77,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1c336466-3797-44f4-a315-7410570ac596","path":"sprites/spr_corrente_caverna1/spr_corrente_caverna1.yy",},},},"Disabled":false,"id":"2d069b10-db8b-4504-8a46-592ced261173","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"621286c8-3238-4f56-bcf6-45cdd4834253","path":"sprites/spr_corrente_caverna1/spr_corrente_caverna1.yy",},},},"Disabled":false,"id":"25fb9102-0169-4624-ae4d-6e1ee03e16d8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

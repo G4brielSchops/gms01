@@ -2,7 +2,7 @@
 // Você pode escrever seu código neste editor
 if imune = 0{
 	instance_destroy(other)
-	imune = 1
+	imune= 1
 	image_alpha = .6
 	alarm[2] = room_speed
 	vermelhar(3)

@@ -87,6 +87,7 @@ if (_colisao)
 y += velocidade_vertical;
 }
 function vermelhar(_a = 0){
-	alarm[_a] = room_speed / 17
-	image_blend = c_red
+	alarm[_a] = 5
+	sprite_index = spr_player_toma_dano
+	image_blend = c_white
 }

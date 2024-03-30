@@ -2,8 +2,7 @@
 // Você pode escrever seu código neste editor
 alarm[0] = room_speed / 2
 morte = 0
-
-
+hspeed = random_range(-5, 5)
 
 
 

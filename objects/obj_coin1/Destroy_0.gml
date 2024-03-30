@@ -1,7 +1,8 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
-global.coins++
-part_particles_create(global.P_System, x, y, global.part_coins2, 20)
+if instance_exists(obj_control) obj_control.contador1 = 1
+global.pegar_moedas += 1
+
 
 
 

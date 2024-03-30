@@ -5,8 +5,7 @@ part_particles_create(global.P_System, x, y, global.part_tempo_voltando, 150)
 image_blend = cor_player
 velocidade = 7
 cooldown_atack = 2
-imune = 0
-
+if upando = 0 imune = 0
 
 
 

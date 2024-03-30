@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2acc42b2-b2e6-4503-8522-c559510cd0ee",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87f7b75d-08f6-406f-805c-d0af38f38224",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91481222-f64c-4248-8f06-04a43089c15a",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "sprites1",
-    "path": "folders/Sprites/sprites1.yy",
+    "name": "sprites_caverna",
+    "path": "folders/Sprites/sprites_caverna.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -48,7 +48,7 @@
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 20.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -56,7 +56,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2acc42b2-b2e6-4503-8522-c559510cd0ee","path":"sprites/spr_ataque1/spr_ataque1.yy",},},},"Disabled":false,"id":"016672e6-9c68-4363-879c-4557cb2d42ae","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"87f7b75d-08f6-406f-805c-d0af38f38224","path":"sprites/spr_ataque1/spr_ataque1.yy",},},},"Disabled":false,"id":"250ef589-7277-4db0-9c52-1eec5aa8494e","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"91481222-f64c-4248-8f06-04a43089c15a","path":"sprites/spr_ataque1/spr_ataque1.yy",},},},"Disabled":false,"id":"eabb6dff-92b2-481e-b05e-bf8a12dc110d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

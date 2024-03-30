@@ -2,9 +2,11 @@
 // Você pode escrever seu código neste editor
 if global.ataque1 = 1{
 	with (other.id){
-		life -= 5
+		life -= 20
+		global.mana += 4
 		knockback = 1
-		vermelhar(0)
+		alarm[0] = 5
+		sprite_index = spr_inimigo1_toma_dano
 	}
 
 }
@@ -12,14 +14,16 @@ if global.ataque1 = 2{
 	with (other.id){
 		life -= 5
 		knockback = 1
-		vermelhar(0)
+		alarm[0] = 5
+		sprite_index = spr_inimigo1_toma_dano
 	}
 }
 if global.ataque1 = 3{
 	with (other.id){
 		life -= 10
 		knockback = 1
-		vermelhar(0)
+		alarm[0] = 5
+		sprite_index = spr_inimigo1_toma_dano
 	}
 }
 
