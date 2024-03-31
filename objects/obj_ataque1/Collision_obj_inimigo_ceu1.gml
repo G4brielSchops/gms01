@@ -4,7 +4,7 @@ if global.ataque1 = 1{
 	with (other.id){
 		life -= 25
 		knockback = 1
-		global.mana += 4
+		if global.mana <= 96 global.mana += 4
 		alarm[0] = 5
 		tomar_dano = 1
 		sprite_index = spr_inimigo_ceu_tomadano

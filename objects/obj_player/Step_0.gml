@@ -90,22 +90,24 @@ if(_jump and pulando = 1 and pulos =1){
 if velocidade_vertical <= 0 and !_chao {
 	if left = 1 and usando_dash = 0 sprite_index = spr_player_pulo 
 	if right = 1 and usando_dash = 0 sprite_index = spr_player_pulo2
+
 	
 }
 if velocidade_vertical > 0 and !_chao {
 	if left = 1 and usando_dash = 0 sprite_index = spr_player_caindo
 	if right = 1 and usando_dash = 0  sprite_index = spr_player_caindo2
+	if left = 0 and right = 0 and usando_dash = 0 sprite_index = spr_player_caindo2
 }
-velocidade_vertical += gravidade;
+
 
 
 if !_chao {
 	criar_bola = 1
 }
 if _dash == true and uso_dash = 0{
-	velocidade =80
+	velocidade =60
 	uso_dash = 1
-	alarm[1] = 6
+	alarm[1] = 9
 	criar_part = 1
 	alarm[0] = room_speed * 2.4
 	imune_boss = 1
@@ -147,9 +149,12 @@ if global.parado = 1{
 	velocidade_horizontal = 0
 	image_blend = c_black
 	part_particles_create(global.P_System, x, y, global.part_recuperar_vida1, 5)
+	if left = 1 sprite_index = spr_player_parado2
+	if right = 1 sprite_index = spr_player_parado
+	if left = 0 and right = 0 sprite_index = spr_player_parado2
 }
 
-
+velocidade_vertical += gravidade;
 
 
 

@@ -1,4 +1,13 @@
 #region particulas
+global.part_caverna_particulas2 = part_type_create();
+part_type_shape(global.part_caverna_particulas2, pt_shape_flare);
+part_type_size(global.part_caverna_particulas2, 0.5, 0.5, 0, 0);
+part_type_color1(global.part_caverna_particulas2, c_white);
+part_type_alpha3(global.part_caverna_particulas2, 1, 1, 1);
+part_type_speed(global.part_caverna_particulas2, 0, 0, 0, 0);
+part_type_direction(global.part_caverna_particulas2, 0, 359, 0, 0);
+part_type_blend(global.part_caverna_particulas2, true);
+part_type_life(global.part_caverna_particulas2, 180, 180);
 
 global.part_recuperar_vida1 = part_type_create();
 part_type_shape(global.part_recuperar_vida1, pt_shape_flare);
@@ -95,10 +104,10 @@ part_type_life(global.part_death, 35, 70);
 global.part_caverna_particulas1 = part_type_create();
 part_type_shape(global.part_caverna_particulas1, pt_shape_flare);
 part_type_size(global.part_caverna_particulas1, 0.5, 0.5, 0, 0);
-part_type_color1(global.part_caverna_particulas1, c_black);
+part_type_color1(global.part_caverna_particulas1, c_white);
 part_type_alpha3(global.part_caverna_particulas1, 1, 1, 1);
-part_type_speed(global.part_caverna_particulas1, 15, 17.5, -0.03, 0);
-part_type_direction(global.part_caverna_particulas1, 90, 90, 0, 0);
+part_type_speed(global.part_caverna_particulas1, 15, 17.5, -1, 10);
+part_type_direction(global.part_caverna_particulas1, 0, 359, 0, 0);
 part_type_blend(global.part_caverna_particulas1, false);
 part_type_life(global.part_caverna_particulas1, 180, 180);
 
@@ -265,7 +274,7 @@ global.directionp1l = 0
 global.ataque1 = 0
 global.temp_pause1 = 0
 global.dar_xp = 1
-global.vida = 70
+global.vida = 100
 global.parado = 0
 global.mana_reduzir = 0
 global.reviver = 0

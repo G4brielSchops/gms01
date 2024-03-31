@@ -3,7 +3,7 @@
 if global.ataque1 = 1{
 	with (other.id){
 		life -= 3
-		global.mana += 2
+		if global.mana <= 98 global.mana += 2
 	}
 
 }

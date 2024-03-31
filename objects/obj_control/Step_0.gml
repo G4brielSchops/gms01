@@ -35,36 +35,43 @@ with obj_player {
 		}
 	}
 }
-
-
-
 var _recuperar_vida = keyboard_check(ord("Q"))
 if _recuperar_vida and recuperar = 1{
-	pode_restaurar = 1
-	global.parado = 1
-	if pode_restaurar = 1{
-		gastar_mana =1
-		pode_restaurar = 0
-		recuperar = 0
-		alarm[6] = room_speed
+	with obj_player
+	{
+		if place_meeting(x, y+1, obj_chao){
+		with obj_control { pode_restaurar = 1
+		global.parado = 1
+		if pode_restaurar = 1{
+			gastar_mana =1
+			pode_restaurar = 0
+			recuperar = 0
+			alarm[6] = room_speed
+		}
+		}
+		}
 	}
 }
-
-if gastar_mana = 1{
+if transferir_moedas = 1{
+	if global.pegar_moedas>0{
+		global.pegar_moedas -=1
+		global.coins += 1
+	}
+	if global.pegar_moedas <= 0{
+		transferir_moedas = 0
+	}
+}
+if gastar_mana = 1 if global.vida < 100{
 	global.vida += .5
 	global.mana -= .5
 	parar_mana +=.5
 }
-if global.vida >= 100 or keyboard_check_released(ord("Q")) or global.mana <=0{
+if global.vida >= 100 or keyboard_check_released(ord("Q")) or global.mana <=0 {
 	gastar_mana = 0
 	parar_mana = 0
 	global.parado = 0
 	obj_player.image_blend = c_white
+	
 }
-
-
-
-
-
 
 
